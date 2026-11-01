@@ -20,3 +20,20 @@ Aplicação desenvolvida em Node.js com testes automatizados utilizando Jest, pi
 ```bash
 npm install
 npm test
+## Entrega Intermediária - Bootcamp II
+
+### Persistência de Dados
+- **Banco de Dados**: Supabase (PostgreSQL)
+- **Tabela Criada**: `favoritos` (campos: `id`, `created_at`, `nome_item`)
+
+### Containerização
+- **Tecnologia**: Docker / Nginx
+- **Arquivos do Projeto**:
+  - `Dockerfile`: Configurado para servir a aplicação web via Nginx.
+  - `.dockerignore`: Configurado para otimizar o build descartando arquivos desnecessários (`.git`, `.github`, `README.md`).
+
+### Como Executar o Container
+```bash
+docker build -t meu-projeto:1.0 .
+docker run -d -p 8080:80 meu-projeto:1.0
+,,,
